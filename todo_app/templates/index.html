@@ -17,6 +17,10 @@
           </li>
         {% endfor %}
       </ul>
+      <form method="post" action="/new">
+        <input name="item" type="text"/>
+        <button type="submit">New TODO</button>
+      </form>
     </div>
   </div>
 {% endblock %}
