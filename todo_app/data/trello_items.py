@@ -45,11 +45,23 @@ def add_item(title):
 
 def save_item(item):
     requests.request(
-        "POST",
-        f"{TRELLO_API_URL}/cards",
+        "PUT",
+        f"{TRELLO_API_URL}/cards/{item["id"]}",
         params={
-            "idList": LIST_ID,
             "name": item["title"],
             **API_PARAMS,
         },
     )
+
+def complete_item(id):
+    logging.error(id)
+    response = requests.request(
+        "PUT",
+        f"{TRELLO_API_URL}/cards/{id}",
+        params={
+            "closed": "true",
+            **API_PARAMS,
+        },
+    )
+
+    logging.error(response.content)
