@@ -44,4 +44,12 @@ def add_item(title):
     )
 
 def save_item(item):
-    pass
+    requests.request(
+        "POST",
+        f"{TRELLO_API_URL}/cards",
+        params={
+            "idList": LIST_ID,
+            "name": item["title"],
+            **API_PARAMS,
+        },
+    )
