@@ -33,7 +33,15 @@ def get_item(id):
     return next((item for item in items if item['id'] == int(id)), None)
 
 def add_item(title):
-    pass
+    requests.request(
+        "POST",
+        f"{TRELLO_API_URL}/cards",
+        params={
+            "idList": LIST_ID,
+            "name": title,
+            **API_PARAMS,
+        },
+    )
 
 def save_item(item):
     pass
