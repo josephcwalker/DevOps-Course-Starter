@@ -1,6 +1,5 @@
 import requests
 import os
-import logging
 
 LIST_ID = os.getenv("TRELLO_LIST_ID")
 
@@ -11,12 +10,15 @@ API_PARAMS = {
 
 TRELLO_API_URL = "https://api.trello.com/1"
 
-def _card_from_trello_card(trello_card):
-    return {
-        "id": trello_card.get("id"),
-        "status": "Not Started",
-        "title": trello_card.get("name"),
-    }
+class Item:
+    def __init__(self, id, name, status = "Not Started"):
+        self.id = id
+        self.name = name
+        self.status = status
+
+    @classmethod
+    def from_trello_card(cls, card):
+        return cls(card["id"], card["name"])
 
 def get_items():
     response = requests.request(
@@ -25,12 +27,12 @@ def get_items():
         params=API_PARAMS,
     )
     
-    cards = map(_card_from_trello_card, response.json())
+    cards = map(Item.from_trello_card, response.json())
     return cards
 
 def get_item(id):
     items = get_items()
-    return next((item for item in items if item['id'] == int(id)), None)
+    return next((item for item in items if item.id == int(id)), None)
 
 def add_item(title):
     requests.request(
@@ -46,16 +48,15 @@ def add_item(title):
 def save_item(item):
     requests.request(
         "PUT",
-        f"{TRELLO_API_URL}/cards/{item["id"]}",
+        f"{TRELLO_API_URL}/cards/{item.id}",
         params={
-            "name": item["title"],
+            "name": item.title,
             **API_PARAMS,
         },
     )
 
 def complete_item(id):
-    logging.error(id)
-    response = requests.request(
+    requests.request(
         "PUT",
         f"{TRELLO_API_URL}/cards/{id}",
         params={
@@ -63,5 +64,3 @@ def complete_item(id):
             **API_PARAMS,
         },
     )
-
-    logging.error(response.content)
