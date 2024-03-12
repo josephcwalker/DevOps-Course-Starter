@@ -8,12 +8,8 @@ class ViewModel:
     
     @property
     def todo_items(self):
-        return list(filter(lambda item: item.status == "Not Started", self.items))
-    
-    @property
-    def in_progress_items(self):
-        return list(filter(lambda item: item.status == "In Progress", self.items))
-    
+        return list(filter(lambda item: item.status == "To Do", self.items))
+
     @property
     def done_items(self):
         return list(filter(lambda item: item.status == "Done", self.items))

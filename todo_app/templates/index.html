@@ -9,15 +9,23 @@
 
   <div class="row">
     <div class="col-md-12">
-      <h2>Items</h2>
+      <h2>To Do</h2>
       <ul class="list-group mb-4">
-        {% for item in view_model.items %}
+        {% for item in view_model.todo_items %}
           <li>
             {{ item.name }}
             <form method="post" action="/complete"> <!-- Would prefer PATCH but it's not supported -->
               <input name="id" value="{{ item.id }}" hidden/>
               <button type="submit">Complete</button>
             </form>
+          </li>
+        {% endfor %}
+      </ul>
+      <h2>Done</h2>
+      <ul class="list-group mb-4">
+        {% for item in view_model.done_items %}
+          <li>
+            {{ item.name }}
           </li>
         {% endfor %}
       </ul>

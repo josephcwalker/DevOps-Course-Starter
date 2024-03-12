@@ -18,22 +18,6 @@ def test_view_model_todo_items():
     assert set(todo_items) == set(expected_todo_items)
 
 
-def test_view_model_in_progress_items():
-    expected_in_progress_items = [
-        Item(1, "test1", "In Progress"),
-        Item(2, "test2", "In Progress"),
-    ]
-    view_model = ViewModel([
-        Item(3, "todo"),
-        Item(4, "Done", "Done"),
-        *expected_in_progress_items,
-    ])
-
-    in_progress_items = view_model.in_progress_items
-
-    assert set(in_progress_items) == set(expected_in_progress_items)
-
-
 def test_view_model_done_items():
     expected_done_items = [
         Item(2, "test2", "Done"),

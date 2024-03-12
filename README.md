@@ -43,6 +43,7 @@ Uncomment the lines:
 ```markdown
 TRELLO_API_KEY=
 TRELLO_API_TOKEN=
+TRELLO_BOARD_ID=
 TRELLO_LIST_ID=
 ```
 
