@@ -12,6 +12,10 @@
       prompt: Trello API Token?
       private: true
 
+    - name: BOARD_ID
+      prompt: Trello Board ID?
+      private: true
+
     - name: LIST_ID
       prompt: Trello List ID?
       private: true
@@ -66,4 +70,3 @@
         name: todoapp
         state: restarted
         daemon_reload: true
-
