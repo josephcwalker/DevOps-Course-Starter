@@ -43,6 +43,7 @@ Uncomment the lines:
 ```markdown
 TRELLO_API_KEY=
 TRELLO_API_TOKEN=
+TRELLO_BOARD_ID=
 TRELLO_LIST_ID=
 ```
 
@@ -69,3 +70,13 @@ Press CTRL+C to quit
  * Debugger PIN: 113-666-066
 ```
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.
+
+## Running Tests
+
+Tests are run using [pytest](https://docs.pytest.org/en/8.0.x/).
+
+To run the tests, run the command:
+
+```bash
+poetry run pytest
+```
