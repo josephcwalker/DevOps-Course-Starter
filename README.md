@@ -71,6 +71,22 @@ Press CTRL+C to quit
 ```
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.
 
+## Deploying the App
+
+Deployment is managed with Ansible.
+
+Create an [inventory file](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html)
+with a `webservers` group containing all the hosts to deploy the app to.
+
+Make sure you have SSH access to these hosts.
+
+Then run:
+```bash
+$ ansible-playbook -i <inventory file> playbook.yaml
+```
+
+The app will then be visible at each of the hosts under port `5000`.
+
 ## Running Tests
 
 Tests are run using [pytest](https://docs.pytest.org/en/8.0.x/).
