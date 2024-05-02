@@ -58,18 +58,21 @@ Once the all dependencies have been installed, start the Flask app in developmen
 $ poetry run flask run
 ```
 
-You should see output similar to the following:
+The containerised development version of the app (with hot reloading) can be run with the following docker commands:
+
 ```bash
- * Serving Flask app 'todo_app/app'
- * Debug mode: on
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on http://127.0.0.1:5000
-Press CTRL+C to quit
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 113-666-066
+$ docker build --target dev --tag todo-app:dev .
+$ docker run --rm -it --env-file .env -p 5000:5000 -v ./todo_app/:/opt/app/todo_app/ todo-app:dev
 ```
+
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.
+
+The production version of the app can be deployed using:
+
+```bash
+$ docker build --target prod --tag todo-app:prod .
+$ docker run --rm -it --env-file .env -p 5000:5000 todo-app:prod
+```
 
 ## Deploying the App
 

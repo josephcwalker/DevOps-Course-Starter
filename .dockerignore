@@ -1,0 +1,9 @@
+.env
+.vscode/
+.github/
+.git/
+
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+.pytest_cache/
