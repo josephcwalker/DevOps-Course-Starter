@@ -62,7 +62,7 @@ The containerised development version of the app (with hot reloading) can be run
 
 ```bash
 $ docker build --target dev --tag todo-app:dev .
-$ docker run --rm -it --env-file .env -p 5000:5000 -v ./todo_app/:/opt/app/todo_app/ todo-app:dev
+$ docker run --rm -it --env-file .env -p 5000:5000 -v ${PWD}/todo_app/:/opt/app/todo_app/ todo-app:dev
 ```
 
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.

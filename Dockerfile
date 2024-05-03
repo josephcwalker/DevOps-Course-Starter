@@ -3,9 +3,9 @@ FROM python:3-alpine AS base
 WORKDIR /opt/app
 
 # Install Poetry
-RUN pip install pipx
-RUN pipx install poetry
-RUN ln -s ~/.local/bin/poetry /usr/bin/poetry
+RUN pip install pipx && \
+    pipx install poetry && \
+    ln -s ~/.local/bin/poetry /usr/bin/poetry
 
 # Install Dependencies
 COPY ./poetry.lock ./pyproject.toml ./poetry.toml ./
