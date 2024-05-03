@@ -1,0 +1,10 @@
+.env
+.vscode/
+.github/
+.git/
+Dockerfile
+
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+.pytest_cache/
