@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2024-06-27T10:48:34.694Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="T0hcA9KDThp38r2mUGrL" version="24.6.3" type="device">
+  <diagram name="Page-1" id="Lubvmyx_OsblPXedXswT">
+    <mxGraphModel dx="1667" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="130" width="490" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-28" value="Python Backend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-29" target="6kc5aPjfgd5-RUPwg-ue-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-47" value="CRUD Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6kc5aPjfgd5-RUPwg-ue-38">
+          <mxGeometry x="-0.0549" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-29" value="Flask&lt;div&gt;Web Server&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="271.25" width="120" height="108.75" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-30" target="6kc5aPjfgd5-RUPwg-ue-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-30" value="Config" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="442.5" y="160" width="65" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-31" target="6kc5aPjfgd5-RUPwg-ue-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-31" value="Environment&lt;div&gt;Variables&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-33" target="6kc5aPjfgd5-RUPwg-ue-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-33" target="6kc5aPjfgd5-RUPwg-ue-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="135" y="351" />
+              <mxPoint x="135" y="353" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-48" value="Webpage Resonse" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6kc5aPjfgd5-RUPwg-ue-40">
+          <mxGeometry x="0.0844" y="-3" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-33" value="Flask Routes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="271.25" width="115" height="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-34" target="6kc5aPjfgd5-RUPwg-ue-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-34" target="6kc5aPjfgd5-RUPwg-ue-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-34" value="Trello Service" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="271.25" width="110" height="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-41" target="6kc5aPjfgd5-RUPwg-ue-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-41" value="Trello" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="269.38" width="130" height="110.62" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6kc5aPjfgd5-RUPwg-ue-44" target="6kc5aPjfgd5-RUPwg-ue-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-44" value="HTML&lt;div&gt;Templates&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="177.5" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6kc5aPjfgd5-RUPwg-ue-49" value="HTTP" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="311" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
