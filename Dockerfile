@@ -29,3 +29,10 @@ ENV FLASK_APP=todo_app/app
 
 CMD [ "poetry", "run", "flask", "run", "--host=0.0.0.0", "--port=5000" ]
 EXPOSE 5000
+
+
+FROM base AS test
+
+COPY ./.env.test ./
+
+CMD [ "poetry", "run", "pytest" ]
