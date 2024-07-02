@@ -15,5 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: docker build --target test --tag todo-app:test .
-      - run: docker run --rm todo-app:test
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          tags: todo-app:test
+          target: test
+          outputs: type=docker
+          cache-from: type=gha
+          cache-to: type=gha
+      - run: docker run todo-app:test
