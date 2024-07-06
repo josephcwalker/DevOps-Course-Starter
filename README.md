@@ -94,8 +94,9 @@ The app will then be visible at each of the hosts under port `5000`.
 
 Tests are run using [pytest](https://docs.pytest.org/en/8.0.x/).
 
-To run the tests, run the command:
+To run the tests, run the commands:
 
 ```bash
-poetry run pytest
+$ docker build --target test --tag todo-app:test .
+$ docker run --rm todo-app:test
 ```
