@@ -74,7 +74,43 @@ $ docker build --target prod --tag todo-app:prod .
 $ docker run --rm -it --env-file .env -p 5000:5000 todo-app:prod
 ```
 
-## Deploying the App
+## Deploying the App to Azure
+
+Build and push the container image to dockerhub by running:
+
+```bash
+$ docker login
+$ docker build --target prod --tag <docker hub username>/todo-app:prod .
+$ docker push <docker hub username>/todo-app:prod
+```
+
+Create the required Azure resources if they don't already exist:
+
+```bash
+$ az appservice plan create --resource-group <resource_group_name> -n <appservice_plan_name> --sku B1 --is-linux
+$ az webapp create --resource-group <resource_group_name> --plan <appservice_plan_name> --name <webapp_name> --deployment-container-image-name docker.io/<dockerhub_username>/todo-app:prod
+```
+
+Set the required environment variables as are set up in `.env`.
+You must also include a `WEBSITES_PORT=5000` environment variable in this list:
+
+```bash
+$ az webapp config appsettings set -g <resource_group_name> -n <webapp_name> --settings FLASK_APP=todo_app/app WEBSITES_PORT=5000 ...
+```
+
+To reflect an updated image in Azure fetch the Webhook by running:
+
+```bash
+$ az webapp deployment container show-cd-url -g <resource_group_name> -n <webapp_name>
+```
+
+If CD hasn't been enabled, first run:
+
+```bash
+az webapp deployment container config --enable-cd true -g <resource_group_name> -n <webapp_name>
+```
+
+## Deploying the App to a VM
 
 Deployment is managed with Ansible.
 
